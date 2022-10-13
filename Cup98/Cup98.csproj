@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+	  <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <Nullable>enable</Nullable>
+	  <PublishSingleFile>true</PublishSingleFile>
+	  <SelfContained>true</SelfContained>
+	  <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.ML.AutoML" Version="0.20.0-preview.22507.2" />
+	</ItemGroup>
+
+</Project>

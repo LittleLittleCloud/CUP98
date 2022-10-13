@@ -1,0 +1,20 @@
+$schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
+#enter path to your script files
+code: C:\Users\xiaoyuz\source\repos\Cup98\Cup98\bin\Release\net6.0\linux-x64\publish\
+#use scripts in Python, R, Java, Julia, C#. Here we have shown python
+command: ./Cup98 ${{inputs.train}} ${{outputs.model}}
+# invoke completions (Ctrl+Space, Cmd+Space) to see the list of environments available
+environment: azureml:dotnet6-mlnet:1
+# invoke completions (Ctrl+Space, Cmd+Space) to see the list of computes available
+compute: azureml:nc6-2
+# This defines the input data to mount. The names of the items in inputs can be referenced in the command
+inputs:
+  train:
+    type: uri_file
+    mode: ro_mount
+    path: azureml:cpu_98_train:1
+outputs:
+  model:
+    type: uri_file
+    mode: rw_mount
+    
